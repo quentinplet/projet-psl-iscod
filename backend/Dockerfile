@@ -71,6 +71,10 @@ if [ -n "$DATABASE_URL" ] || [ -n "$MYSQL_URL" ]; then\n\
     \n\
     # Exécuter les migrations\n\
     php artisan migrate --force\n\
+    \n\
+    # Exécuter les seeders (seulement si les tables sont vides)\n\
+    echo "Checking if database needs seeding..."\n\
+    php artisan db:seed --force || echo "Seeding failed or already done"\n\
 fi\n\
 \n\
 # Cache optimisations\n\
