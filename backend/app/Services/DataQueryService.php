@@ -8,7 +8,7 @@ use Illuminate\Pagination\LengthAwarePaginator;
 class DataQueryService
 {
     /**
-     * Applies search filter to the query.
+     * Applique les filtres à la requête.
      */
     public function filter(Builder $query, string $search, $category_id, $supplier_id, $status): Builder
     {
@@ -35,7 +35,7 @@ class DataQueryService
     }
 
     /**
-     * Applies sorting to the query.
+     * Applique le tri à la requête.
      */
     public function sort(Builder $query, string $sortField, string $sortDirection): Builder
     {
@@ -48,7 +48,7 @@ class DataQueryService
     }
 
     /**
-     * Applies pagination to the query.
+     * Applique la pagination à la requête.
      */
     public function paginate(Builder $query, int $perPage): LengthAwarePaginator
     {
@@ -56,7 +56,7 @@ class DataQueryService
     }
 
     /**
-     * Control sortField and sortDirection parameters.
+     * Valide les paramètres de tri.
      */
     public function validateSortParams(string $sortField, string $sortDirection): array
     {
@@ -72,7 +72,7 @@ class DataQueryService
     }
 
     /**
-     * Gets a filtered, sorted, and paginated list of items.
+     * Obtient une liste filtrée et paginée des données.
      */
     public function getFilteredList(Builder $query, array $params): LengthAwarePaginator
     {

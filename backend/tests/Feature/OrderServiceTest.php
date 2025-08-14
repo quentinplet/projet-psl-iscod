@@ -19,7 +19,10 @@ class OrderServiceTest extends TestCase
         /**
          * Préparation des données pour le test PLAN
          */
-        $user = User::factory()->create();
+
+        // Créer un utilisateur de type acheteur pour la commande
+        $user = User::factory()->create(['role' => 'acheteur']);
+
         $cartItems = [
             ['product_id' => 1, 'quantity' => 3],
             ['product_id' => 2, 'quantity' => 2],
