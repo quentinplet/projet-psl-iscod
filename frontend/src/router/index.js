@@ -68,7 +68,7 @@ const router = createRouter({
           component: ProductsList,
           meta: {
             requiresAuth: true,
-            allowedRoles: ["gestionnaire", "acheteur"],
+            allowedRoles: ["acheteur"],
           },
         },
 

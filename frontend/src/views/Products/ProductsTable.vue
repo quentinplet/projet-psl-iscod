@@ -168,7 +168,7 @@
                             class="mr-2 h-5 w-5 text-indigo-400"
                             aria-hidden="true"
                           />
-                          Edit
+                          Modifier
                         </RouterLink>
                       </MenuItem>
                       <MenuItem v-slot="{ active }">
@@ -186,7 +186,7 @@
                             class="mr-2 h-5 w-5 text-indigo-400"
                             aria-hidden="true"
                           />
-                          Delete
+                          Supprimer
                         </button>
                       </MenuItem>
                     </div>
