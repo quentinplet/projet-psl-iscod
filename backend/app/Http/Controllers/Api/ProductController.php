@@ -116,9 +116,10 @@ class ProductController extends Controller
             return $relativePath;
         }
 
-        // Si l'image n'existe pas, on la stocke
-        $image->storeAs($directory, $filename, 'public');
+        // Stocke dans storage/app/public/products
+        $image->storeAs('products', $filename, 'public');
 
-        return $relativePath; // Retourne l'URL de la nouvelle image
+        // Retourne le chemin accessible via /storage/products/xxxx.jpg
+        return 'storage/products/' . $filename;
     }
 }
